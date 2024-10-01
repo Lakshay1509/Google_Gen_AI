@@ -14,9 +14,10 @@ const Chatbot = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const apiKey = import.meta.env.VITE_REACT_API;
+  console.log(apiKey);
   // Initialize your Gemini API
   const genAI = new GoogleGenerativeAI(
-    "AIzaSyA0YRmZnI_qmAPrjGZfPLUemM0pJP9I1Pk"
+    apiKey
   );
   const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
