@@ -14,7 +14,7 @@ const Chatbot = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const apiKey = import.meta.env.VITE_REACT_API;
-  console.log(apiKey);
+ 
   // Initialize your Gemini API
   const genAI = new GoogleGenerativeAI(
     apiKey
