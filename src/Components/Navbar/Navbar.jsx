@@ -3,6 +3,7 @@ import Logo from "../../assets/logo.png";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 import DarkMode from "./DarkMode";
 import {logo2} from "../../assets/index.js";
+import { Link } from 'react-router-dom';
 
 const NavLinks = [
   {
@@ -38,12 +39,14 @@ const Navbar = () => {
                 );
               })}
               {/* Darkmode feature */}
+              <Link to="/chatbot">
               <button
                   className="primary-btn"
                 >
 
                   Chat with S.A.M
                 </button>
+                </Link>
               <DarkMode />
               
             </ul>
