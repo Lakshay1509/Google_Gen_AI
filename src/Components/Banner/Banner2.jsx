@@ -4,7 +4,7 @@ import { BiPlayCircle } from "react-icons/bi";
 import {product} from "../../assets/index.js"
 import { Link } from 'react-router-dom';
 
-const Banner2 = ({ togglePlay }) => {
+const Banner2 = () => {
   return (
     <div className="py-12 sm:py-0 relative">
       <div className="container min-h-[620px] flex items-center">
@@ -38,7 +38,6 @@ const Banner2 = ({ togglePlay }) => {
                 <button
                   data-aos="fade-up"
                   data-aos-delay="900"
-                  onClick={togglePlay}
                   className="flex items-center gap-2"
                 >
                   {" "}

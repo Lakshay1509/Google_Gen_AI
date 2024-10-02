@@ -36,8 +36,8 @@ const App = () => {
       <Navbar />
       <Hero togglePlay={togglePlay} />
       <Quotes />
-      <Banner togglePlay={togglePlay} />
-      <Banner2 togglePlay={togglePlay} />
+      <Banner  />
+      <Banner2 />
       <Features />
       <AppStore />
       <Footer />
