@@ -10,21 +10,6 @@ const NavLinks = [
     name: "Home",
     link: "#",
   },
-  {
-    id: 2,
-    name: "Products",
-    link: "#",
-  },
-  {
-    id: 3,
-    name: "Pricing",
-    link: "#",
-  },
-  {
-    id: 4,
-    name: "Contact",
-    link: "#",
-  },
 ];
 const Navbar = () => {
   const [showMenu, setShowMenu] = React.useState(false);
@@ -53,8 +38,16 @@ const Navbar = () => {
                 );
               })}
               {/* Darkmode feature */}
+              <button
+                  className="primary-btn"
+                >
+
+                  Chat with S.A.M
+                </button>
               <DarkMode />
+              
             </ul>
+            
           </nav>
 
           {/* Mobile View Sidebar */}
