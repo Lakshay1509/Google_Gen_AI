@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import {send,delete1,logo1,gemini} from './assets/index.js'
+import { useTypewriter,Cursor } from "react-simple-typewriter";
 
 
 
@@ -57,6 +58,12 @@ const Chatbot = () => {
     setChatHistory([]);
   };
 
+  const [text] = useTypewriter({
+    words: ['Feel Free to ask anything 😊! Your conversations are private and confidential. How can I help you today?'],
+    typeSpeed: 15,
+    delaySpeed : false,
+  });
+
   return (
     <div className="flex flex-col h-screen bg-theme overflow-auto">
       {/* Header */}
@@ -67,7 +74,8 @@ const Chatbot = () => {
                 I'm S.A.M
           </span>
           </h1>
-          <h2 className="mt-[8px] font-body">Feel Free to ask anything 😊! Your conversations are private and confidential.</h2>
+          <h2 className="mt-2 font-body text-white">{text}<Cursor /></h2>
+          
         </div>
       </header>
 
