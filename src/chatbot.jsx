@@ -61,8 +61,13 @@ const Chatbot = () => {
     <div className="flex flex-col h-screen bg-theme overflow-auto">
       {/* Header */}
       <header className="bg-theme text-white py-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-3xl font-bold">S.A.M</h1>
+        <div className="container mx-auto text-left">
+          <h1 className="text-3xl font-bold font-body" >Hi there,{" "}
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                I'm S.A.M
+          </span>
+          </h1>
+          <h2 className="mt-[8px] font-body">Feel Free to ask anything 😊! Your conversations are private and confidential.</h2>
         </div>
       </header>
 
