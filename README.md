@@ -1,8 +1,39 @@
-# React + Vite
+## Team Details
+-**Team-Name**: Ctrl + Win
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+-**Project-Title**: Gemini-Enhanced AI for Mental Health & Emotional Support.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+-**Team-Details**: 
+      TEAM LEADER: LAKSHAY GUPTA
+
+      
+-**Team-Members**: 
+- **MEMBER_1** - Arusha Habib [@habibarusha]
+- **MEMBER_2** - Lakshay Gupta [@Lakshay1509]
+- **MEMBER_3** - Kanik Chawla [@kanikchawla]
+- **MEMBER_4** - Aryaman Agarwal [@aryaman-agar]
+
+
+## Project Links
+
+
+- **Video Demonstration:** https://drive.google.com/file/d/1TEeH5T-eCwQXs4d2MKQRLjzapGYEeAp0/view?usp=sharing
+- **Source Code:** https://github.com/Lakshay1509/Google_Gen_AI
+
+
+## Prerequisites
+
+- A modern web browser (Chrome, Firefox, Safari, etc.)
+- A web server to serve the HTML and JavaScript files (optional for local development)
+
+## Tech Stack 
+- Java Script
+- NODE JS
+- HTML
+- CSS
+- REACT
+
+
+
