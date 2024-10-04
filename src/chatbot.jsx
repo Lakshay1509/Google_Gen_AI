@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useRef,useEffect} from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import {send,delete1,logo1,gemini} from './assets/index.js'
 import { useTypewriter,Cursor } from "react-simple-typewriter";
@@ -13,6 +13,7 @@ const Chatbot = () => {
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const chatEndRef = useRef(null);
 
   const apiKey = import.meta.env.VITE_REACT_API;
  
@@ -70,6 +71,12 @@ const Chatbot = () => {
     typeSpeed: 15,
     delaySpeed : false,
   });
+  
+  useEffect(() => {
+    if (!isLoading) {
+      chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [chatHistory, isLoading]);
 
   return (
     <div className="flex flex-col h-screen bg-theme overflow-auto">
@@ -92,6 +99,7 @@ const Chatbot = () => {
         <ChatHistory chatHistory={chatHistory} />
       
         <Loader isLoading={isLoading} />
+        <div ref={chatEndRef} />
       </main>
 
       {/* Footer with Input and Buttons */}
