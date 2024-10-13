@@ -1,21 +1,14 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
-import Card from "./Card";
 import Stats from "./Stats.jsx";
-import { happy, sad, anxious, angry } from "../images/index.js";
-import { dataLine, dataBar } from "../assets/chartData";
-import { Line, Bar } from "react-chartjs-2";
 import Select from "./Select.jsx";
-import Quotes from "./Quotes.jsx";
 import BarData from "../assets/BarData.jsx";
 import LineData from "../assets/LineData.jsx";
 import { setMoodContext, setWeeklyContext } from "../../../../User/user.js";
 import { useDispatch } from "react-redux";
 import MyComponent from "../../../Bento/Bento.jsx";
 import Books from "./Books/Books.jsx";
-import Podcasts from "./Podcasts/Podcasts.jsx";
-import Context from "./Context.jsx";
 import { Link } from "react-router-dom";
 import Pie from "../assets/PieChart.jsx"
 import {
