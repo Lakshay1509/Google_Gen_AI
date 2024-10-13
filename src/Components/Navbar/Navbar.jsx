@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "../../assets/logo.png";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 import DarkMode from "./DarkMode";
-import {logo2} from "../../assets/index.js";
-import { Link } from 'react-router-dom';
+import { logo2 } from "../../assets/index.js";
+import { Link } from "react-router-dom";
+import SignUp from "../Sign_up/signup.jsx";
+import LogOut from "../Logout/logout.jsx";
+import LogIn from "../Login/login.jsx";
+import { useSelector, useDispatch } from "react-redux";
 
 const NavLinks = [
   {
@@ -14,7 +18,12 @@ const NavLinks = [
 ];
 const Navbar = () => {
   const [showMenu, setShowMenu] = React.useState(false);
+  const [id, setid] = React.useState("");
+  const contextId = useSelector((state) => state.user.id);
+
+  console.log(id === "");
   const toggleMenu = () => setShowMenu(!showMenu);
+
   return (
     <div className="relative z-[9999] text-black dark:text-white duration-300">
       <div className="container py-2 md:py-0">
@@ -40,17 +49,26 @@ const Navbar = () => {
               })}
               {/* Darkmode feature */}
               <Link to="/chatbot">
-              <button
-                  className="primary-btn"
-                >
+                <button className="primary-btn">Chat with S.A.M</button>
+              </Link>
+              {contextId === "" ? (
+                <>
+                  <LogIn />
+                  <SignUp />
+                  
+                </>
+              ) : (
+                <>
+                <Link to="/dashboard">
+                    <button className="primary-btn">Dashboard</button>
+                  </Link>
+                <LogOut />
+                </>
 
-                  Chat with S.A.M
-                </button>
-                </Link>
+              )}
+
               <DarkMode />
-              
             </ul>
-            
           </nav>
 
           {/* Mobile View Sidebar */}

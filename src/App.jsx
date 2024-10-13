@@ -8,8 +8,7 @@ import Features from "./Components/Features/Features";
 import AppStore from "./Components/AppStore/AppStore";
 import Footer from "./Components/Footer/Footer";
 import PopupPlayer from "./Components/PopupPlayer/PopupPlayer";
-import Chatbot from "./chatbot.jsx";
-import MyComponent from "./Components/bento.jsx";
+import CheckUserContext from "./Components/CheckUserContext";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -41,6 +40,8 @@ const App = () => {
       <Features />
       <AppStore />
       <Footer />
+      <CheckUserContext />
+      
 
 
       {/* Video Player */}

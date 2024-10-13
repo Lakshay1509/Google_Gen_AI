@@ -2,8 +2,7 @@ import React, { useState , useRef,useEffect} from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import {send,delete1,logo1,gemini} from './assets/index.js'
 import { useTypewriter,Cursor } from "react-simple-typewriter";
-
-
+import { useSelector,useDispatch } from "react-redux";
 
 // Style components using Tailwind CSS
 import ChatHistory from "./Components/ChatHistory/index.jsx";
@@ -14,6 +13,10 @@ const Chatbot = () => {
   const [chatHistory, setChatHistory] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const chatEndRef = useRef(null);
+
+  const [name, setName] = useState("");
+
+ 
 
   const apiKey = import.meta.env.VITE_REACT_API;
  
@@ -78,12 +81,16 @@ const Chatbot = () => {
     }
   }, [chatHistory, isLoading]);
 
+  const contextName = (useSelector((state) => state.user.username));
+  
+
+  
   return (
     <div className="flex flex-col h-screen bg-theme overflow-auto">
       {/* Header */}
       <header className="bg-theme text-white py-4">
         <div className="container mx-auto text-left">
-          <h1 className="text-3xl font-bold font-body" >Hi there,{" "}
+          <h1 className="text-3xl font-bold font-body" >Hi {contextName},{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                 I'm S.A.M
           </span>
