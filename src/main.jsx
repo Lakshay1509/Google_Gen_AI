@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 import Chatbot from './chatbot.jsx';
 import Layout from './Layout.jsx';
-import Form from "./Components/Signup/Index.jsx";
+import Form from './Components/Signup/Index.jsx';
 import FormLogin from './Components/LogIn/Index.jsx';
 import './index.css';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
