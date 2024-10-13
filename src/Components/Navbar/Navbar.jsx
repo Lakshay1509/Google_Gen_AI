@@ -4,7 +4,7 @@ import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 import DarkMode from "./DarkMode";
 import { logo2 } from "../../assets/index.js";
 import { Link } from "react-router-dom";
-import SignUp from "../Sign_up/Signup.jsx";
+import SignUp from "../Signup/Signup.jsx";
 import LogOut from "../Logout/Logout.jsx";
 import LogIn from "../LogIn/Login.jsx";
 import { useSelector } from "react-redux";
